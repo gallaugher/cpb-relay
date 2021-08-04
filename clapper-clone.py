@@ -1,3 +1,5 @@
+# Sample code by Prof. John Gallaugher
+# For details, see: https://github.com/gallaugher/cpb-relay
 # IMPORTANT NOTE: This code only works on a CPB, not a CPX
 # That's because the chip used in the CPX (The SAMD21) cannot
 # handle the sound sensor features in the cp library that the
