@@ -1,6 +1,5 @@
-# By John Gallaugher https://gallaugher.com  Twitter: @gallaugher
-# YouTube: https://YouTube.com/profgallaugher
-# Step-by-step video playlist demonstrating build at: https://bit.ly/bluefruit-school
+# By Prof. John Gallaugher https://gallaugher.com  Twitter: @gallaugher
+# For details, see: https://github.com/gallaugher/cpb-relay
 
 # Run into build trouble? Adafruit runs a great help forum at:
 # https://forums.adafruit.com - most questions are answered within an hour.
