@@ -1,9 +1,16 @@
-# Sample code by Prof. John Gallaugher
+# By Prof. John Gallaugher https://gallaugher.com  Twitter: @gallaugher
+# For details, see: https://github.com/gallaugher/cpb-relay
+
 # For details, see: https://github.com/gallaugher/cpb-relay
 # IMPORTANT NOTE: This code only works on a CPB, not a CPX
 # That's because the chip used in the CPX (The SAMD21) cannot
 # handle the sound sensor features in the cp library that the
 # more powerful chip in the CPB (nRF52840) can.
+
+# Run into build trouble? Adafruit runs a great help forum at:
+# https://forums.adafruit.com - most questions are answered within an hour.
+# Adafruit also has a discord channel at:
+# http://adafru.it/discord
 
 import time
 import board
