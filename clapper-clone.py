@@ -29,8 +29,12 @@ number_of_claps = 0
 # from the distance people are likely to be from the CPB.
 sound_threshold = 250
 
+# Note: this code is improved over code in original video
+time_at_last_clap = time.monotonic()
+
 while True:
     if cp.loud_sound(sound_threshold): # loud sound detected
+        time_at_last_clap = time.monotonic() # record time since last clap
         print((cp.sound_level,)) # will print to Plotter if you want to see the plot
         number_of_claps = number_of_claps + 1 # add one to number_of_claps
         print("*** Clap! #:", number_of_claps)
@@ -46,7 +50,10 @@ while True:
             number_of_claps = 0 # set number_of_claps back down to zero.
         time.sleep(0.2)
     else: # time has passed without a loud sound detected
-        print((cp.sound_level,)) # will print to Plotter if you want to see the plot
-        number_of_claps = 0 # reset number_of_claps back to zero.
-        print("No claps", number_of_claps)
+        time_since_last_clap = time.monotonic() - time_at_last_clap
+        if time_since_last_clap > 1: # if one second has gone by since last clap, reset clap count to zero
+            print("time.monotonic(): ", time.monotonic(), "time_since_last_clap:", time_since_last_clap)
+            print((cp.sound_level,)) # will print to Plotter if you want to see the plot
+            number_of_claps = 0 # reset number_of_claps back to zero.
+            print("No claps", number_of_claps)
 
